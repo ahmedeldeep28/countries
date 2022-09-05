@@ -12,7 +12,7 @@ export default function Home({ data }) {
 
   let listCountry = country.map((item, idx) => {
     return (
-      <div className="col-md-4" key={idx}>
+      <div className="col-sm-6 col-md-4" key={idx}>
         {item.name.common != "Israel" ? <CardCountry data={item} /> : null}
       </div>
     )

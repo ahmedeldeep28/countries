@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router';
@@ -16,6 +17,9 @@ let Name = ({ country }) => {
 
     return (
         <div className='container'>
+            <Head>
+                <title>{name.common != "Israel" ? name.common : "pigs"}</title>
+            </Head>
             <Link href={`/`}>
                 <a className='btn my-5'>
                     back

@@ -1,12 +1,15 @@
 import Head from 'next/head'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CardCountry from './../../components/CardCountry';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export default function Region({ data }) {
 
-    let [country, setCountry] = useState(data);
+    let [country, setCountry] = useState([]);
+    useEffect(() => {
+        setCountry(data)
+    }, [data])
 
     const router = useRouter()
     let regionPage = router.query.region
@@ -14,7 +17,7 @@ export default function Region({ data }) {
 
     const listCountry = country.map((item, idx) => {
         return (
-            <div className="col-md-4" key={idx}>
+            <div className="col-sm-6 col-md-4" key={idx}>
                 {item.name.common != "Israel" ? <CardCountry data={item} /> : null}
             </div>
         )
@@ -28,6 +31,9 @@ export default function Region({ data }) {
     }
     return (
         <div className="app">
+            <Head>
+                <title>region {regionPage}</title>
+            </Head>
             <div className='container'>
                 <div className="row g-2 mt-4 justify-content-between">
                     <div className="col-md-4">
