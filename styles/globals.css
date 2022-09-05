@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* set varibal color */
+  --color-title: #feffff;
+  --color-text-1: hsl(0, 0%, 100%);
+  --color-text-2: hsl(0, 0%, 80%);
+  --color-primary: hsl(209, 23%, 22%);
+  --color-secondary: hsl(207, 26%, 28%);
+
+  margin: 0;
+  padding: 0px;
+  background-color: hsl(207, 26%, 17%);
+  font-family: 'Nunito', sans-serif;
+}
+
+.color-title {
+  color: var(--color-title);
+}
+
+.color-text-1 {
+  color: var(--color-text-1);
+}
+
+.color-text-2 {
+  color: var(--color-text-2);
+}
+
+.bg-card {
+  background-color: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-title);
+  text-transform: capitalize;
+}
+
+.btn {
+  padding: 9px 16px;
+  border-radius: 6px;
+  background: var(--color-secondary);
+  text-decoration: none;
+  color: var(--color-text-1);
+  font-size: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: inline-block;
+}
+
+.btn-sm {
+  padding: 4px 14px;
+  font-size: 12px;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: unset !important;
+}
+
+header {
+  background-color: var(--color-primary);
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 12px 16px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  color: var(--color-title);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-title);
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+
+}
+
+.dropdown .dropdown__text {
+  background-color: var(--color-primary);
+  color: var(--color-title);
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid var(--color-primary);
+  text-transform: capitalize;
+}
+
+.dropdown .dropdown__text:focus+.dropdown__menu,
+.dropdown:hover>.dropdown__menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown .dropdown__menu {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  background-color: var(--color-primary);
+  list-style: none;
+  width: 80%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.dropdown .dropdown__menu .dropdown__item a {
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all .3s;
+  border-radius: 6px;
+  color: var(--color-title);
+  display: block;
+  text-decoration: none;
+
+}
+
+.dropdown .dropdown__menu .dropdown__item:hover a {
+  background-color: var(--color-secondary);
+}
+
+.cardCountry {
+  background-color: var(--color-primary);
+  border-radius: 6px;
+}
+.cardCountry__img {
+  height: 250px;
+}
+.cardCountry__img {
+    object-fit: cover;
+    object-position: center;
+}
+.cardCountry__info {
+  list-style: none;
+  padding: 0px;
+}
+
+.cardCountry__info li {
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+
+.cardCountry__info li .key {
+  color: var(--color-text-1);
+}
+
+.cardCountry__info li .value {
+  color: var(--color-text-2);
+}
