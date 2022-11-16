@@ -20,7 +20,7 @@ export default function Home({ data }) {
 
   let filtertionCountry = (e) => {
     let filter = data.filter(el => {
-      return el.name.common.includes(e.target.value)
+      return el.name.common.toLowerCase().includes(e.target.value.toLowerCase())
     })
     setCountry(filter)
   }
